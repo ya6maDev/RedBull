@@ -1,0 +1,296 @@
+@charset "utf-8";
+
+/* @logoArea */
+#logoArea{
+	width: 100%;
+	padding-top: 0.25em;
+	padding-left: 0.5em;
+	color: #e74c3c;
+	/*background-color: #55ACEE;*/
+	background-color: rgba(85,172,238);
+}
+
+#logo{
+	float: left;
+	font-size: 1.5em;
+	vertical-align: middle;
+}
+
+#logoArea form{
+	margin-left : auto ;  /*右寄せ*/
+	margin-right: 1em;
+	width: 20%;
+}
+
+#logoArea input{
+	border-radius: 2em;
+}
+
+/* end */
+
+/* @group TopMenu */
+#top_menu {
+	width: 100%;
+	margin: auto;
+	padding: 0;
+}
+
+#top_menu ul{
+	list-style:none;
+}
+
+#top_menu li{
+	display: block;
+	float: left;
+	width: 20%;
+	margin: 0;
+	padding: 0; 
+	background-color: #55ACEE;
+}
+
+#top_menu li form{
+	display: block;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	padding: 0;
+}
+
+#top_menu input{
+	border-radius: 2em;
+}
+
+#top_menu li a{
+	display: block;
+	padding: 12px 0 10px;
+	background: #55ACEE;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+#top_menu li a:hover{
+	background: #e74c3c;
+}
+
+#toggle{ 
+	display: none;
+}
+/* @end */
+
+/* @group article */
+article{
+	display: block;
+	overflow: hidden; /*floatの解除*/
+	margin: auto;
+	padding: auto;
+	width: 100%;
+}
+
+#topArticle{
+	width: 40%;
+	margin: auto 0;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	padding-left: 0.5em;
+	overflow: hidden;
+	float: left;
+	position:relative;
+}
+
+#subArticle{
+	width: 20%;
+	margin: auto 0;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	padding-left: 0.5em;
+	overflow: hidden;
+	float: left;
+	position:relative;
+}
+
+#topArticle img:hover,#subArticle img:hover{
+	opacity: 0.5;
+}
+
+.comment{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin: auto 0;
+	padding: auto 0;
+	background-color: rgba(44, 62, 80,0.5);
+}
+
+.comment h3{
+	margin: 0.02em;
+	margin-left: 0.25em;
+	text-align: left;
+	color:#fff;
+}
+
+.comment h4{
+	margin: 0.01em;
+	margin-left: 1em;
+	text-align: left;
+	color:#fff;
+}
+
+/* end */
+
+/* @news */
+#news{
+	width: 100%;
+	overflow: hidden;
+	margin: auto 0;
+	margin-top: 1em;
+	margin-left : auto ; margin-right : auto ; /*中央寄せ*/
+	padding: 1em;
+	background-color: rgba(189, 195, 199,0.3);
+	/*border-radius: 1em;*/
+	color: #34495e;
+}
+
+#news_left{
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+
+#news_left a{
+	color: #34495e;
+}
+
+#news_left a:hover{
+	color: #fff;	
+}
+
+#news_right{
+	width: 80%;
+	padding-right: 5%;
+	float: right;
+	text-align: left;
+	border-left: thin solid rgba(52,73,94,0.5);
+}
+
+#news_right ul{
+	list-style:none;
+}
+
+#news_right li{
+	border-bottom:1px solid #CCC;
+}
+
+/* end */
+
+#footer_menu{
+	width: 100%;
+	margin-left : auto ; margin-right : auto ; /*中央寄せ*/
+}
+
+#footer_menu ul{
+	list-style:none;
+}
+
+#footer_menu li{
+	float: left;
+	width: 20%;
+	margin: 0;
+	padding: 0; 
+}
+
+#footer_menu li a{
+	color: #fff;
+}
+
+/* 画面の横幅が768pxまで(スマートフォン、タブレット) */
+@media screen and (max-width: 768px) {
+	
+	#logoArea{
+		
+	}
+
+	#logoArea form{
+	margin-left : auto ; margin-right: auto; /*中央寄せ*/
+	width: 80%;
+	}
+
+	#top_menu{
+		display: none;
+	}
+
+	#top_menu li{
+		width: 100%;
+	}
+
+	#toggle{
+		display: block;
+		position: relative;
+		width: 100%;
+		background: #55ACEE;
+	}
+
+	#toggle a{
+		display: block;
+		position: relative;
+		padding: 12px 0 10px;
+		border-bottom: 1px solid #55ACEE;
+		text-align: center;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	#toggle:before{
+		display: block;
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 10px;
+		width: 20px;
+		height: 20px;
+		margin-top: -10px;
+		background: #fff;
+	}
+
+	#toggle a:before, #toggle a:after{
+		display: block;
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 10px;
+		width: 20px;
+		height: 4px;
+		background: #55ACEE;
+	}
+
+	#toggle a:before{
+		margin-top: -6px;
+	}
+
+	#toggle a:after{
+		margin-top: 2px;
+	}
+	/* @group article */
+	article{
+		width: 95%;
+	}
+
+	#topArticle{
+		width: 100%;
+	}
+
+	#subArticle{
+		width: 100%;
+	}
+
+	#news{
+	width: 95%;
+	border-radius: 0;
+}
+/* end */
+}
+
+/* 画面の横幅が480pxまで(スマートフォン)*/
+@media screen and (max-width: 480px) {
+}
